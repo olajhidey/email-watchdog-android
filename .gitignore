@@ -1,0 +1,77 @@
+# Android/IntelliJ/Android Studio
+.idea/
+*.iml
+.gradle/
+/local.properties
+/.gradle
+
+# Gradle build outputs
+/build/
+**/build/
+
+# Android Studio captures
+captures/
+
+# Gradle wrapper jar (keep wrapper files, ignore the binary)
+!gradle/wrapper/gradle-wrapper.jar
+
+# Generated files
+*/build/
+*/generated/
+
+# Local configuration file (sdk path, etc.)
+local.properties
+
+# Signing keys
+*.jks
+*.keystore
+key.properties
+
+# Misc
+.DS_Store
+*.log
+*.tmp
+*.swp
+
+# Android specific
+.externalNativeBuild/
+.cxx/
+*.so
+
+# Firebase / Google services - DO NOT commit google-services.json
+# Ignore any google-services.json at any level, and also explicitly the app/ one
+**/google-services.json
+app/google-services.json
+
+# Firebase CLI
+.firebase/
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE files
+*.iml
+*.ipr
+*.iws
+
+# OS files
+Thumbs.db
+
+# Coverage
+coverage/
+
+# NDK
+obj/
+
+# JetBrains Rider
+.idea/
+
+# Optional: local Gradle properties
+gradle.properties.local
+
+# Do not ignore README or scripts
+!README.md
+
