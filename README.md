@@ -1,4 +1,4 @@
-![EmailWatchdog logo](app/src/main/res/drawable/watchdog.png)
+<img src="app/src/main/res/drawable/watchdog.png" alt="EmailWatchdog logo" width="150" style="height:auto;" />
 
 --- 
 # EmailWatchdog
