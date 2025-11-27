@@ -1,5 +1,7 @@
-# EmailWatchdog
+![EmailWatchdog logo](@watchdog.png)
 
+--- 
+# EmailWatchdog
 EmailWatchdog is a small Android app (Jetpack Compose) that displays short summaries of emails stored in Firestore and delivers push notifications using Firebase Cloud Messaging (FCM).
 
 The project uses:
@@ -59,12 +61,6 @@ cd emailwatchdog
 
 5. Build and run from Android Studio. Or use Gradle from the repo root:
 
-```bash
-# assemble a debug build
-./gradlew assembleDebug
-# install on a connected device
-./gradlew installDebug
-```
 
 ## Run & behavior notes
 
