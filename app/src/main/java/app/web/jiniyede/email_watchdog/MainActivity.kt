@@ -49,11 +49,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
@@ -195,6 +197,9 @@ fun SummaryListScreen(
         topBar = {
             TopAppBar(
                 title = { Text(text = "Email Summaries") },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.surface
+                )
             )
         }
     ) {
@@ -421,7 +426,10 @@ fun SummaryDetailsScreen(
                     ) {
                         MarkdownText(
                             markdown = summary.Summary,
-                            modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth(),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            lineHeight = 4.sp,
+                            linkColor = Color.Gray
                         )
                     }
                 }
@@ -467,15 +475,6 @@ sealed class SummaryRoute(val route: String) {
     }
 }
 
-class SummaryViewModelFactory(private val userId: String) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(SummaryViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST")
-            return SummaryViewModel() as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
-}
 
 @Preview(showBackground = true)
 @Composable
