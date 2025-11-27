@@ -1,4 +1,5 @@
 <img src="app/src/main/res/drawable/watchdog.png" alt="EmailWatchdog logo" width="150" style="height:auto;" />
+
 # EmailWatchdog
 EmailWatchdog is a small Android app (Jetpack Compose) that displays short summaries of emails stored in Firestore and delivers push notifications using Firebase Cloud Messaging (FCM).
 
